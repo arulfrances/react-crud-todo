@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arulfrances/react-crud-todo.git"
+  },
+  "author": "Arul Frances",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arulfrances/react-crud-todo/issues"
+  },
+  "homepage": "https://github.com/arulfrances/react-crud-todo#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "pg": "^8.8.0"
+  }
+}
