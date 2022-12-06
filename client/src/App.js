@@ -1,15 +1,17 @@
-import React, { Fragment } from "react";
-import "./App.css";
+import React, { Fragment } from 'react';
+import './App.css';
 
 
 //components
 
-import InputProduct from './components/InputProduct';
+import InputProducts from './components/InputProduct';
 
 function App() {
   return (
     <Fragment>
-      <InputProduct />
+      <div className="container">
+        <InputProducts />
+      </div>
     </Fragment>
   );
 }
