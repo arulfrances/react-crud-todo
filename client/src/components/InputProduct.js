@@ -1,9 +1,9 @@
 import React from "react";
 
-const InputProducts = () => {
+const InputProduct = () => {
     return (
-        <h1>Input Product</h1>
+        <h1>Praise be to LORD!</h1>
     )
 }
 
-export default InputProducts;
+export default InputProduct;
