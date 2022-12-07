@@ -1,51 +1,60 @@
-import React, {Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 
 
 const ListProducts = () => {
 
-const [products, setProducts] = useState([]);
+    const [products, setProducts] = useState([]);
 
-const getProducts = async () => {
-try {
-    const response = await fetch("http://localhost:5000/products");
-    const jsonData = await response.json();
+    const getProducts = async () => {
+        try {
+            const response = await fetch("http://localhost:5000/products");
+            const jsonData = await response.json();
 
-    console.log(jsonData);
-    setProducts(jsonData);
-} catch (error) {
-    console.error(error.message);
-}
-};
+            console.log(jsonData);
+            setProducts(jsonData);
+        } catch (error) {
+            console.error(error.message);
+        }
+    };
 
-useEffect(() => {
-getProducts();
-});
+    useEffect(() => {
+        getProducts();
+    });
 
-console.log(products);
+    console.log(products);
 
-   // return <h1>List of Products</h1>;
+    // return <h1>List of Products</h1>;
 
-   return (
-    <Fragment>
-        {" "}
-        <table class="table mt-5 text-center">
-            <thead><tr>
-                <th>Product Name</th>
-                <th>Description</th> 
-                <th>Price</th>
+    return (
+        <Fragment>
+            {" "}
+            <table class="table mt-5 text-center">
+                <thead><tr>
+                    <th>Product Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
                 </tr></thead>
 
                 <tbody>
-                    <tr>
+                    { /* <tr>
                         <td>Test</td>
                         <td>Test124</td>
                         <td>2122</td>
                     </tr>
+   */ }
+
+                    {products.map(product => (
+                        <tr>
+                            <td>{product.productname} </td>
+                            <td>{product.description} </td>
+                            <td>{product.price} </td>
+                        </tr>
+                    ))}
                 </tbody>
 
             </table>
-    </Fragment>
-   )
+        </Fragment>
+    )
 }
 
 

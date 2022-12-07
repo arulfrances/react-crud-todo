@@ -2,7 +2,8 @@ import React, { Fragment, useState } from "react";
 
 const InputProduct = () => {
     return (
-        <h1>Praise be to LORD!</h1>
+        { /*<!--  <h1>Praise be to LORD!</h1> --> */ }
+
     )
 }
 
