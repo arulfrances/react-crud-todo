@@ -9,6 +9,23 @@ app.use(express.json()); //req.body
 
 
 //routes
+//create productName
+
+app.post("/productname", async (req, res) => {
+    try {
+        console.log(req.body);
+        const { productName } = req.body;
+
+        const newProductName = await pool.query("INSERT INTO producttable (productname) VALUES ($1) RETURNING *",
+            [productName]);
+
+        res.json(newProductName.rows[0]);
+
+    } catch (error) {
+        console.error(error.message);
+    }
+});
+
 
 //create a product
 app.post("/products", async (req, res) => {
